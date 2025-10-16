@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Apply theme colors and fonts */
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+
+    /* Tailwind CSS variable mappings for shadcn/ui compatibility */
+    --background: 248 250 252; /* #f8fafc */
+    --foreground: 15 23 42;     /* #0f172a */
+
+    --primary: 99 102 241;      /* #6366f1 */
+    --primary-foreground: 255 255 255;
+
+    --secondary: 14 165 233;    /* #0ea5e9 */
+    --secondary-foreground: 15 23 42;
+
+    --accent: 249 115 22;       /* #f97316 */
+    --accent-foreground: 15 23 42;
+
+    --success: 22 163 74;       /* #16a34a */
+    --success-foreground: 2 44 34;
+
+    --destructive: 239 68 68;   /* #ef4444 */
+    --destructive-foreground: 69 10 10;
+
+    --muted: 226 232 240;       /* #e2e8f0 */
+    --muted-foreground: 71 85 105; /* #475569 */
+
+    --border: 229 231 235;      /* #e5e7eb */
+    --input: 229 231 235;
+    --ring: 99 102 241;         /* primary */
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-base), system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), var(--font-base), system-ui, sans-serif;
+  }
+}
